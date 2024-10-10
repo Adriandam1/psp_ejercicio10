@@ -5,6 +5,10 @@ public class Main {
         Hilo hilo1 = new Hilo("hilo número 1");
         Hilo hilo2 = new Hilo("hilo número 2");
 
+        // b) hazlo con prioridades
+        hilo2.setPriority(Thread.MAX_PRIORITY); // Prioridad más alta para hilo 2
+        hilo1.setPriority(Thread.MIN_PRIORITY); // Prioridad más baja para hilo 1
+
 
         hilo2.start(); // Primero empieza hilo2
         try {
@@ -20,6 +24,7 @@ public class Main {
         } catch (InterruptedException e) {
             System.err.println("error al ejecutar "+hilo2.getName());
         }
+
 
 
 
